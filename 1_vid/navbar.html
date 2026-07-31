@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body,
+      html {
+        height: 100%;
+        width: 100%;
+        font-family: sans-serif;
+      }
+      body {
+        background: #000;
+        color: white;
+      }
+
+      #nav {
+        padding: 20px 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      #part2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 20px;
+      }
+      h1{
+        font-size: 100px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="nav">
+      <h2>Akhilesh</h2>
+
+      <div id="part2">
+        <h4>Home</h4>
+        <h4>About</h4>
+        <h4>Testimonial</h4>
+        <h4>About us</h4>
+      </div>
+    </div>
+
+    <h1>
+        Seriyans coding Schoool
+    </h1>
+
+    <!-- js -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/gsap.min.js"
+      integrity="sha512-oJ8QbaQThQoJZ7oEv+29jfPM6CcP+zUxh3PKJs1vyOhx0UraUrE7PQgeItu3dOuCJyrzWpoYMsVjkkPEBzbUqw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      let tl = gsap.timeline();
+      tl.from("h2", {
+        y: -20,
+        opacity: 0,
+        duration: 1,
+        delay: 0.5,
+      });
+      tl.from("h4", {
+        y: -20,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.5,
+      });
+
+        tl.from("h1",{
+            y:20,
+            opacity:0,
+            duration:1,
+            scale:0.2
+        })
+
+    </script>
+  </body>
+</html>
